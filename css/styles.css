@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@0;1&display=swap');
+
+
+/* ---------------------------- general for all the pages ---------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    background-color:rgb(255,204,136);
+}
+
+nav{
+    background-color:rgb(6,70,80);
+    height: 90px;
+    width: 100%;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-height: fit-content;
+    align-items: center;
+}
+
+
+li{
+    list-style-type: none;
+    margin: 10px 15px;
+    padding: 7.5px;
+    border: 2.5px outset rgb(116,199,185);
+    border-radius: 15%;
+}
+
+a{
+    text-decoration:underline;
+    color:rgb(116,199,185);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:hover{
+    color:aliceblue;
+}
+
+footer{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(4,50,39);
+    justify-content:center;
+    align-items:center;
+    align-content: center;
+}
+
+.logo{
+    margin: 15px;
+}
+.indexLogo{
+    margin: 10px 15px;
+    align-items: center;
+}
+
+/* ----------------------------------- index main setup -------------------------------- */
+main{
+    margin: 75px 5px;
+    width:fit-content;
+    padding: 20px;
+    border: 5px solid rgb(244,163,46);
+}
+
+.conteiner{
+    display: grid;
+    grid-template-columns: repeat(3 400px);
+    grid-template-rows: repeat(3 200px);
+    grid-template-areas:
+    "volcano mountain forest"
+    ". title ."
+    "clouds jujuy salinas";
+    gap: 10px;
+    justify-content: center;
+}
+
+.mainchart{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mainchart img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.volcano{
+    grid-area: volcano;
+}
+
+.mountain{
+    grid-area: mountain;
+}
+
+.forest{
+    grid-area: forest;
+}
+
+.title{
+    grid-area: title;
+    object-fit: cover;
+    width: 100%;
+}
+
+.clouds{
+    grid-area: clouds;
+}
+
+.jujuy{
+    grid-area: jujuy;
+}
+
+.salinas{
+    grid-area: salinas;
+}
+
+
+/* ------------------------------------------------- text design ------------------------------------------------ */
+h1{
+    margin: auto;
+    padding: 72.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align:center;
+    text-justify:center;
+    font-size: 40px;
+    color:rgb(4,50,39);
+}
+
+h2{
+    margin: auto;
+    padding: 72.5px;
+    color:rgb(4,50,39);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align:center;
+}
+
+p{
+    font-size: 20px;
+    color:rgb(4,50,39);
+}
+
+.nextPage{
+    font-weight: bolder;
+    margin: 10px;
+}
+/*---------------------main section Costa Rica-----------------------*/
+.conteiner-cr{
+        display: grid;
+        grid-template-columns: repeat(2 400px);
+        grid-template-rows: repeat(3 200px);
+        grid-template-areas:
+        "titlecr titlecr"
+        "paragraphcr paragraphcr"
+        "cerro puerto";
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .secondChart{
+        overflow: hidden;
+        width: 100%;
+        border-radius: 10%;
+        display: flex;
+        align-items: flex-start;
+}
+
+.secondChart img{
+    object-fit: cover;
+    width: 100%;
+}
+
+    .title-cr{
+        grid-area: titlecr;
+        width: fit-content;
+    }
+
+    .paragraph-cr{
+        grid-area: paragraphcr;
+        width: fit-content;
+    }
+
+    .cerro{
+        grid-area: cerro;
+    }
+
+    .puerto{
+        grid-area: puerto;
+    }
+
+/*---------------------section and articles-----------------------*/
+.multiSection{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgb(244,163,46); 
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    margin: 75px 35px;
+}
+
+article{
+    align-items: center;
+    padding: 10px;
+    margin: 75px 100px;
+}
+
+.send-message{
+    border: 2px solid rgb(244,163,46);
+}
+
+@media screen and (max-width: 965px){
+    nav{
+        height: 150px;
+    }
+    ul{
+        display: wrap;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 790px){
+    nav{
+        height: 180px;
+    }
+    ul{
+        display: wrap;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .conteiner{
+        display: grid;
+        grid-template-columns: repeat(2 400px);
+        grid-template-rows: repeat(7 200px);
+        grid-template-areas:
+        "volcano ."
+        ". mountain"
+        "forest ."
+        ". title"
+        "clouds ."
+        ". jujuy"
+        "salinas .";
+        gap: 10px;
+        justify-content: center;
+    }
+    .conteiner-cr{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 620px){
+    nav{
+        height: 210px;
+    }
+    ul{
+        display: wrap;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
